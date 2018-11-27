@@ -31,3 +31,9 @@
 .cardHover:hover {
 	opacity:1;
 }
+.iframe {
+  height: 300px;
+  width: 300px;
+  resize: both;
+  overflow: auto;
+}

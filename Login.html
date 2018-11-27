@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+
+	<link rel="stylesheet" href="included/tailwind.css">
+	<link rel="stylesheet" href="included/animate.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+	<link rel="stylesheet" href="included/jquery-3.2.1.js">
+	<link rel="stylesheet" href="included/popper.js">
+	<link rel="stylesheet" href="included/bootstrap-material-design.js">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<body class="bg-grey-darkest">
+</div>
+<div id="app" class="h-screen w-full relative">
+	<!-- background -->
+<div class="flex flex-col h-full p-4 w-full absolute pin-l fixed lg:w-2/5 items-center justify-center">
+	<div class="pg1">
+		<div id="loginLogo" class="logo flex flex-wrap h-12 items-center mb-12 ">
+				<img src="imgs/dp_logo on black-01.png" alt="">
+	    </div> 
+
+	    <!-- halp, putting loginlogo inside pg 1 somehow fixes the width but when it is outside it breaks -->
+
+	    <!-- halp, what is the best practice for creating multiple pages of a form on a single page? Like the google SSO page. -->
+
+	    <div v-if="formPg == 1" class="flex">
+		    <form class="bg-black rounded-lg shadow-lg w-full p-12 lg:p-3">
+			  <div class="form-group text-white">
+			    <label for="exampleInputEmail1 text-white">Email address</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+			  </div>
+			  <div class="form-group text-white">
+			    <label for="exampleInputPassword1 text-white">Password</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </div>
+			  <div class="form-check">
+			    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+			    <label class="form-check-label text-white" for="exampleCheck1">Remember Me</label>
+			  </div>
+			  <button type="submit" class="flex btn btn-primary">Submit</button>
+			</form>
+		</div>
+
+		<div v-if="formPg == 2" class="flex flex-col bg-black rounded-lg shadow-lg w-full p-12 lg:p-3 text-white items-center">
+		  <h4>Profile Selection</h4>
+			<!-- card container -->
+		  <div class="flex flex-row justify-around w-full mx-px">
+		  	<div class="card flex h-32 w-32 justify-end m-1 cardHover">
+				<img class="card-img-top" src="imgs/dad.jpg" alt="Dad User Pic">
+		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3 ">Dad</div>
+		  	</div>
+
+		  	<div class="card flex h-32 w-32 justify-end m-1">
+		  		<img class="card-img-top" src="imgs/echo.jpg" alt="Echo User Pic">
+		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3">Echo</div>
+		  	</div>
+			<!-- halp why does this one not work? card and card-img-top are from bootstrap -->
+		  	<div class="card flex h-32 w-32 justify-end m-1 cardHover">
+		  		<img class="card-img-top" src="imgs/mom.jpg" alt="Mom User Pic">
+		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3">Mom</div>
+		  	</div>
+		  </div> 
+			  <button type="next" class="flex btn btn-primary">next</button>
+		</div>
+	</div>
+</div>
+<!-- 	<img class="opacity-0 md:opacity-100 bg-auto flex" src="imgs/incrediblesBG.jpg"> -->
+	<img class="bgtry1 flex md:opacity-100 opacity-0" src="imgs/incrediblesBG.jpg">
+
+	<!-- halp, would like this image to fill the page with media queries like MD and LG. made a seperate class for it. -->
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	
+	var app = new Vue({
+  el: '#app',
+  data: {
+    formPg(): 1,
+  }, methods:{
+  	modalAction(action){
+  		if(action == 'close'){
+  			this.modal = false
+  		}
+  		else if(action == 'open'){
+  			this.modal = true
+  			 setTimeout(function() {
+  			 	this.modalWidth = 80;
+  			 }, 500);
+  		}
+  		
+  	}
+  }
+})
+
+
+
+
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+</body>
+</html>
