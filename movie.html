@@ -80,10 +80,19 @@
 	<div class="flex flex-col items-baseline static md:justify-center">
 		
 		<!-- scrob bar -->
-		<div class="flex flex-row bg-white w-full h-3 mb-2 bg-red">		
+		<div class="flex flex-row bg-white w-full h-3 mb-2 relative">		
 			<!-- player Progress blue bar -->
+
 			<div class="flex bg-blue h-3 w-3/5 opacity-50 fixed"></div>
+			<div class="w-1 h-6 bg-yellow absolute pin-t -mt-1" style="left:100px;"></div>
+						<div class="w-1 h-6 bg-yellow absolute pin-t -mt-1" style="left:100px;"></div>
+						<div class="w-1 h-6 bg-yellow absolute pin-t -mt-1" style="left:134px;"></div>
+						<div class="w-1 h-6 bg-yellow absolute pin-t -mt-1" style="left:200px;"></div>
+						<div class="w-1 h-6 bg-yellow absolute pin-t -mt-1" style="left:600px;"></div>
 			<!-- Scene Selection Marks, equally spaced -->
+
+			<!-- do position absolute yellow scrobs -->
+			<!-- inline styles for the left positionings -->
 			<div class="flex flex-row w-full h-3 justify-around mb-2 fixed">
 				<div class="flex bg-black h-3 w-1 opacity-25"></div>
 				<div class="flex bg-black h-3 w-1 opacity-25"></div>				
@@ -96,10 +105,8 @@
 			</div>
 		</div>
 
-
-		<!-- halp, the div above also breaks the center on the playerbar -->
-		<div id="playerbar" class="flex bg-grey-darkest w-full pin-b md:mb-5 items-center justify-center md:justify-around flex-row md:rounded-full sm:h-1/6 md:w-5/6 md:shadow-md">
-			<button @click="modalAction('open')" class="text-lg w-12 h-12 text-white"><i class="fas fa-bookmark"></i></button>
+		<div id="playerbar" class="flex bg-grey-darkest w-full md:mx-auto items-center justify-center md:justify-around md:rounded-full sm:h-1/6 md:w-5/6 md:shadow-md">
+			<button @click="modalAction('open')" class="text-lg w-12 h-12 text-white"><i class="fas fa-flag"></i></button>
 			<button class="text-lg w-12 h-12 text-white"><i class="fas fa-backward"></i></button>
 			<button class="text-lg w-12 h-12 bg-grey-darker rounded-full text-white"><i class="fas fa-play"></i></button>
 			<button class="text-lg w-12 h-12 text-white"><i class="fas fa-forward"></i></button>
