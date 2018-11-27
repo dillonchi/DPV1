@@ -27,23 +27,45 @@
 	    <!-- halp, putting loginlogo inside pg 1 somehow fixes the width but when it is outside it breaks -->
 
 	    <!-- halp, what is the best practice for creating multiple pages of a form on a single page? Like the google SSO page. -->
-	    
-	    <div class="flex">
+
+	    <div v-if="formPg == 1" class="flex">
 		    <form class="bg-black rounded-lg shadow-lg w-full p-12 lg:p-3">
 			  <div class="form-group text-white">
-			    <label for="exampleInputEmail1">Email address</label>
+			    <label for="exampleInputEmail1 text-white">Email address</label>
 			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 			  </div>
 			  <div class="form-group text-white">
-			    <label for="exampleInputPassword1">Password</label>
+			    <label for="exampleInputPassword1 text-white">Password</label>
 			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 			  </div>
 			  <div class="form-check">
 			    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-			    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+			    <label class="form-check-label text-white" for="exampleCheck1">Remember Me</label>
 			  </div>
-			  <button type="submit" class="btn btn-primary">Submit</button>
+			  <button type="submit" class="flex btn btn-primary">Submit</button>
 			</form>
+		</div>
+
+		<div v-if="formPg == 2" class="flex flex-col bg-black rounded-lg shadow-lg w-full p-12 lg:p-3 text-white items-center">
+		  <h4>Profile Selection</h4>
+			<!-- card container -->
+		  <div class="flex flex-row justify-around w-full mx-px">
+		  	<div class="card flex h-32 w-32 justify-end m-1 cardHover">
+				<img class="card-img-top" src="imgs/dad.jpg" alt="Dad User Pic">
+		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3 ">Dad</div>
+		  	</div>
+
+		  	<div class="card flex h-32 w-32 justify-end m-1">
+		  		<img class="card-img-top" src="imgs/echo.jpg" alt="Echo User Pic">
+		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3">Echo</div>
+		  	</div>
+			<!-- halp why does this one not work? card and card-img-top are from bootstrap -->
+		  	<div class="card flex h-32 w-32 justify-end m-1 cardHover">
+		  		<img class="card-img-top" src="imgs/mom.jpg" alt="Mom User Pic">
+		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3">Mom</div>
+		  	</div>
+		  </div> 
+			  <button type="next" class="flex btn btn-primary">next</button>
 		</div>
 	</div>
 </div>
@@ -58,7 +80,7 @@
 	var app = new Vue({
   el: '#app',
   data: {
-    modal: false,
+    formPg(): 1,
   }, methods:{
   	modalAction(action){
   		if(action == 'close'){

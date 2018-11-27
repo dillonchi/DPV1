@@ -23,3 +23,11 @@
 .bgtry1 {
 	object-fit: fill;
 }
+
+.cardHover{
+	opacity:.5;
+}
+
+.cardHover:hover {
+	opacity:1;
+}
