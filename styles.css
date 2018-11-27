@@ -1,0 +1,21 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.loginLogo {
+  		height: 40px;
+  		width: 120px;
+  		-o-object-fit: contain;
+}
+.bg-smoke {
+	background-color: rgba(0,0,0,.7);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
