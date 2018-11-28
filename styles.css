@@ -37,3 +37,13 @@
   resize: both;
   overflow: auto;
 }
+.bgTransparentEffect {
+	background-repeat: repeat repeat;
+	background:url("imgs/Transparent BG-01.png");
+}
+/*https://webkit.org/blog/363/styling-scrollbars/*/
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar:corner-present:disabled;

@@ -3,19 +3,20 @@
 <link rel="stylesheet" href="included/tailwind.css">
 <link rel="stylesheet" href="included/animate.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-<body class="bg-black">
+<body class="bgTransparentEffect bg-black">
+	<!-- 	trying to emulate http://demo.oxygenna.com/lambda -->
 	<!-- toolbar -->
 	<div class="flex h-8 items-center justify-between border-b-2 border-white border-dashed">
 		<h4 class="text-white flex pl-4">MQ WIZ 3000</h4>
 		<div class="rightfloat flex">
-			<button @click="modalAction('open')" class="hover:text-grey-darkest text-lg w-12 h-12 text-white"><i class="fas fa-retweet"></i></button>
-			<button @click="modalAction('open')" class="hover:text-grey-darkest text-lg w-12 h-12 text-white"><i class="fas fa-mobile"></i></button>
-			<button @click="modalAction('open')" class="hover:text-grey-darkest text-lg w-12 h-12 text-white"><i class="fas fa-tablet"></i></button>
-			<button @click="modalAction('open')" class="hover:text-grey-darkest text-lg w-12 h-12 text-white"><i class="fas fa-tv"></i></button>	
+			<button @click="modalAction('open')" class="hover:text-grey-darkest hover:bg-red-darker text-lg bg-red w-12 h-12 text-white"><i class="fas fa-retweet"></i></button>
+			<button @click="modalAction('open')" class="hover:text-grey-darkest hover:bg-red-darker text-lg bg-red w-12 h-12 text-white"><i class="fas fa-mobile"></i></button>
+			<button @click="modalAction('open')" class="hover:text-grey-darkest hover:bg-red-darker text-lg bg-red w-12 h-12 text-white"><i class="fas fa-tablet"></i></button>
+			<button @click="modalAction('open')" class="hover:text-grey-darkest hover:bg-red-darker text-lg bg-red w-12 h-12 text-white"><i class="fas fa-tv"></i></button>	
 		</div>
 	</div>
-<div class="flex bg-grey-darkest h-screen justify-center">
-	<iframe class="align: middle; flex border-white border-2" src="Login.html">
+<div class="flex bg-grey-darkest justify-center items-center height:.9;">
+	<iframe class="align: middle; flex border:none; height:600px; width:576px; ::-wbekit-scrollbar"  src="Login.html">
   <p>Your browser does not support iframes.</p>
 </iframe>
 </div>
