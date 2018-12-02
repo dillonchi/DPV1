@@ -18,7 +18,7 @@
 </div>
 <div id="app" class="h-screen w-full relative">
 	<!-- background -->
-<div class="flex flex-col h-full p-4 w-full absolute pin-l fixed lg:w-2/5 items-center justify-center">
+<div class="flex flex-col h-full p-4 w-full absolute pin-l fixed items-center justify-center">
 	<div class="pg1">
 		<div id="loginLogo" class="logo flex flex-wrap h-12 items-center mb-12 ">
 				<img src="imgs/dp_logo on black-01.png" alt="">
@@ -29,7 +29,7 @@
 	    <!-- halp, what is the best practice for creating multiple pages of a form on a single page? Like the google SSO page. -->
 
 	    <div v-if="formPg == 1" class="flex">
-		    <form class="bg-black opacity-75 rounded-lg shadow-lg w-full p-12 lg:p-3">
+		    <form class="bg-black rounded-lg shadow-lg w-full p-12 lg:p-3">
 			  <div class="form-group text-white">
 			    <label for="exampleInputEmail1 text-white">Email address</label>
 			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -59,7 +59,7 @@
 		  		<img class="card-img-top" src="imgs/echo.jpg" alt="Echo User Pic">
 		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3">Echo</div>
 		  	</div>
-			<!-- halp why does this one not work? card and card-img-top are from bootstrap -->
+			<!-- Fix - make the images the same aspect ratio and see if that works, failing that adjust so they are all the same size -->
 		  	<div class="card flex h-32 w-32 justify-end m-1 cardHover">
 		  		<img class="card-img-top" src="imgs/mom.jpg" alt="Mom User Pic">
 		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3">Mom</div>
@@ -83,8 +83,8 @@
     formPg(): 1,
   }, methods:{
   	modalAction(action){
-  		if(action == 'close'){
-  			this.modal = false
+  		if(formpg == '1'){
+  			formPG.modal = false
   		}
   		else if(action == 'open'){
   			this.modal = true
@@ -96,12 +96,6 @@
   	}
   }
 })
-
-
-
-
-
-
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
