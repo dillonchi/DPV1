@@ -28,7 +28,7 @@
 
 	    <!-- halp, what is the best practice for creating multiple pages of a form on a single page? Like the google SSO page. -->
 
-	    <div v-if="formPg == 1" class="flex">
+	    <template v-if="loginscreen === 1" class="flex">
 		    <form class="bg-black rounded-lg shadow-lg w-full p-12 lg:p-3">
 			  <div class="form-group text-white">
 			    <label for="exampleInputEmail1 text-white">Email address</label>
@@ -42,11 +42,11 @@
 			    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 			    <label class="form-check-label text-white" for="exampleCheck1">Remember Me</label>
 			  </div>
-			  <button type="submit" class="flex btn btn-primary">Submit</button>
+			  <button v-on:click="submit" class="flex btn btn-primary">Submit</button>
 			</form>
-		</div>
+		</template>
 
-		<div v-if="formPg == 2" class="flex flex-col bg-black rounded-lg shadow-lg w-full p-12 lg:p-3 text-white items-center">
+		<template v-else class="flex flex-col bg-black rounded-lg shadow-lg w-full p-12 lg:p-3 text-white items-center">
 		  <h4>Profile Selection</h4>
 			<!-- card container -->
 		  <div class="flex flex-row justify-around w-full mx-px">
@@ -65,8 +65,8 @@
 		  		<div class="name flex w-32 h-12 bg-black opacity-25 text-lg items-center p-3">Mom</div>
 		  	</div>
 		  </div> 
-			  <button type="next" class="flex btn btn-primary">next</button>
-		</div>
+			  <button type="next" <a href="browse.html"></a> class="flex btn btn-primary" >next</button>
+		</template>
 	</div>
 </div>
 <!-- 	<img class="opacity-0 md:opacity-100 bg-auto flex" src="imgs/incrediblesBG.jpg"> -->
@@ -80,10 +80,10 @@
 	var app = new Vue({
   el: '#app',
   data: {
-    formPg(): 1,
+    formPg(): 2,
   }, methods:{
   	modalAction(action){
-  		if(formpg == '1'){
+  		if(formpg == '2'){
   			formPG.modal = false
   		}
   		else if(action == 'open'){
