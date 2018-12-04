@@ -68,12 +68,16 @@
 .bigbadtitle {
 	font-family: 'Bungee', cursive;
 }
-.cardbrowseviewer {
+.cardbrowseviewer,  {
 	font-family: 'Bitter', serif;
 
 }
-.singlecard :hover {
+.singlecard hover {
 	animation-duration: 3s;
   animation-delay: 2s;
   animation-iteration-count: infinite;
+}
+/*Halp*/
+a {
+	color:white;
 }
