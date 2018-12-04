@@ -42,8 +42,38 @@
 	background:url("imgs/Transparent BG-01.png");
 }
 /*https://webkit.org/blog/363/styling-scrollbars/*/
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 13px;
     height: 13px;
 }
 ::-webkit-scrollbar:corner-present:disabled;
+*/
+.moviedetail { 
+  background: url(imgs/bigpooh.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.h-half {
+			height: 65vh;
+		}
+.box {
+	height:32px;
+	display:block;
+}
+.dvdcover {
+
+}
+.bigbadtitle {
+	font-family: 'Bungee', cursive;
+}
+.cardbrowseviewer {
+	font-family: 'Bitter', serif;
+
+}
+.singlecard :hover {
+	animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}

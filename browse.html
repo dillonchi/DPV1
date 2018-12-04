@@ -12,15 +12,17 @@
 	<link rel="stylesheet" href="included/popper.js">
 	<link rel="stylesheet" href="included/bootstrap-material-design.js">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
+	<link href="css/hover-min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bitter|Bungee" rel="stylesheet">
 </head>
 <body class="bg-grey-darkest">
 </div>
 <div id="app" class="h-screen w-full relative">
 	<!-- background -->
-<div class="flex flex-col h-full w-full absolute pin-l fixed lg:w-2/5">
+<div class="flex flex-col h-full w-full absolute pin-l lg:w-full lg:flex-row">
 	<!-- top bar -->
-	<div class="h-32 w-full">
+	<div class="w-full lg:w-2/5 lg:h-full lg:flex-col lg:bg-black lg:shadow-lg lg:border-r-2 lg:border-black lg:fixed justify-center">
+		<div class="flex lg:visible h-32 items-center"><h1 class="mx-auto bigbadtitle text-white">BROWSE</h1></div>
 		<!-- search bar -->
 		<div class="flex bg-white h-16 m-2 rounded-sm text-grey-dark p-3 justify-between">
 			<div class="flex items-center">
@@ -33,21 +35,84 @@
 		</div>
 		<!-- Browsebuttons -->
 		<!-- #TODO add hover classes -->
-		<div class="flex h-16 shadow-lg relative">
-			<div class="flex flex-col w-1/3 items-center justify-center"> <span class="text-white font-bold">Characters</span>
+		<div class="flex h-16 shadow-lg lg:shadow-none relative flex-wrap">
+			<div class="flex w-1/3 lg:w-full lg:h-24 items-center justify-center lg:border-yellow lg:border-r-4"> <span class="text-white font-bold relative">Characters</span>
+				<div class="bg-yellow w-1 absolute pin-r"></div> <!-- halp -->
 			</div>
-			<div class="flex w-1/3 items-center justify-center"> <span class="text-white font-bold">Popular</span></div>
-			<div class="flex w-1/3 items-center justify-center"> <span class="text-white font-bold">Just for You!</span></div>
-		<div class="flex h-1 bg-yellow w-1/3 pin-b absolute"></div>
+			<div class="flex w-1/3  lg:w-full lg:h-24 items-center justify-center"> <span class="text-white font-bold">Popular</span></div>
+			<div class="flex w-1/3  lg:w-full lg:h-24 items-center justify-center"> <span class="text-white font-bold">Just for You!</span></div>
+		<div class="flex h-1 bg-yellow w-1/3 pin-b absolute lg:invisible"></div>
 		</div>
 		<!-- Cardbrowsing area -->
 	</div>
-	<div class="flex w-full h-32 mt-3 pt-3 justify-around">
+	<div class="flex lg:w-2/5 lg:visible ml-12 ml-12"></div> 
+
+	
+	<div class="flex flex-wrap w-full h-16 mt-3 pt-3 justify-around lg:w-2/3 ">
+		<!-- mobile row -->
 		<!-- Single Card -->
-		<div class="flex bg-white h-48 w-32 rounded shadow-lg overflow-hidden">
-			<img class="w-full block rounded-t h-16"src="imgs/chars/1 (19).jpg">
-			<div class="flex bg-black text-white w-full p-3 opacity-75">Pug Life</div>
-			<!-- Halp. -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded-t absolute"src="imgs/chars/c00.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl"> Welsh Pixies</a></div>
+		</div>
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c01.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl"> Meowch </a></div>
+		</div>
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c02.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl"> BeerBear</a></div>
+		</div>
+		<!-- mobile row -->
+		<!-- mobile row -->
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c03.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl">Chip n'Dale</a></div>
+		</div>
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/pooh.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl"> Pooh Beer</a></div>
+		</div>
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c05.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl">TokenKids</a></div>
+		</div>
+		<!-- mobile row -->
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c06.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl">Barbie Show</a></div>
+		</div>
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c08.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl">Simba</a></div>
+		</div>
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c09.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl">Not Bill Nye</a></div>
+		</div>
+		<!-- mobile row -->
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c13.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl">Pam The Pom</a></div>
+		</div>
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c14.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl">Mini</a></div>
+		</div>
+		<!-- Single Card -->
+		<div class="singlecardflex bg-black h-64 w-48 rounded-lg shadow-lg overflow-hidden relative mb-3">
+			<img class="w-full block rounded absolute"src="imgs/chars/c15.jpg">
+			<div class="absolute flex bg-black text-white w-full p-3 opacity-75 pin-b justify-center rounded-b-lg> <a href="#" class="text-white hover:text-grey-light text-2xl">Red Riding</a></div>
 		</div>
 		
 	</div>
