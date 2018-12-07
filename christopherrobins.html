@@ -36,9 +36,8 @@
 			}">>
 			</div>
 			<!-- Dvd Cover -->
-			<div class="dvdcover mx-3 w-24 h-32 bg-green">
-			
-
+			<div class="dvdcover mx-3 w-24 h-32">
+				<img style="background-image: url('https://tailwindcss.com/img/card-left.jpg' src="imgs/crdvdcover.jpg">
 			</div>
 			<div class="flex bg-black flex-col w-2/3 text-white"> <!-- description -->
 				<span class="text-yellow"><h3>Christopher Robins</h3></span>
@@ -85,18 +84,22 @@
 			<span class="font-bold">Characters:</span>
 			<!-- character row -->
 			<div class="flex w-full h-12 w-auto rounded items-center underline mt-2 py-2">
-				<div class="flex bg-grey-lightest rounded-full h-12 w-12"></div> 
+				<div class="flex h-12 w-12">
+					<img class="rounded-full"src="imgs/ewan.jpg">
+				</div> 
 				<a href="#" class="text-yellow p-1">Ewan McGregor</a> |
 				<a href="#" class="text-white p-1">Christopher Robin</a>
 			</div>
 			<div class="flex w-full h-12 w-auto rounded items-center underline mt-2 py-2">
-				<div class="flex bg-grey-lightest rounded-full h-12 w-12"></div> 
-				<a href="#" class="text-yellow p-1">Hayley Atwell</a> |
+				<div class="flex h-12 w-12">
+					<img class="rounded-full"src="imgs/hayley.jpg">
+				</div> 				<a href="#" class="text-yellow p-1">Hayley Atwell</a> |
 				<a href="#" class="text-white p-1">Evelyn Robin</a>
 			</div>
 			<div class="flex w-full h-12 w-auto rounded items-center underline mt-2 py-2">
-				<div class="flex bg-grey-lightest rounded-full h-12 w-12"></div> 
-				<a href="#" class="text-yellow p-1">Jim Cummings</a> |
+				<div class="flex h-12 w-12">
+					<img class="rounded-full"src="imgs/jim.jpg">
+				</div> 				<a href="#" class="text-yellow p-1">Jim Cummings</a> |
 				<a href="#" class="text-white p-1">Winnie The Pooh (Voice)</a>
 			</div>
 			<a href="#" class="text-yellow p-1 mt-2">More</a>
@@ -118,17 +121,18 @@
 		</div>
 		<!-- Scene Selectione -->
 		<div class="bg-black flex w-screen p-4 flex-col text-white border border-b-2 border-grey-dark"> <!-- Halp why is the border broken? -->
+			<!-- todo - fix the side to side thing.-->
 			<span class="font-bold">Scene Selection:</span>
 			<div class="flex flex-wrap justify-between">
-				<div class="flex bg-grey-lightest h-32 w-64 items-center justify-center overflow-hidden rounded mt-2 relative">
+				<div class="flex bg-grey-lightest h-32 w-64 mx-auto items-center justify-center overflow-hidden rounded mt-2 relative">
 					<img class="w-full block rounded-t absolute"src="imgs/sg/sg1.png">
 					<div class="flex bg-black pin-b pin-l rounded-br-sm p-1 opacity-75 absolute"> 15:00</div>
 				</div>
-				<div class="flex bg-grey-lightest h-32 w-64 items-center justify-center overflow-hidden rounded mt-2 relative">
+				<div class="flex bg-grey-lightest h-32 w-64 mx-auto items-center justify-center overflow-hidden rounded mt-2 relative">
 					<img class="w-full block rounded-t absolute"src="imgs/sg/sg2.png">
 					<div class="flex bg-black pin-b pin-l rounded-br-sm p-1 opacity-75 absolute"> 30:00</div>
 				</div>
-				<div class="flex bg-grey-lightest h-32 w-64 items-center justify-center overflow-hidden rounded mt-2 relative">
+				<div class="flex bg-grey-lightest h-32 w-64 mx-auto items-center justify-center overflow-hidden rounded mt-2 relative">
 					<img class="w-full block rounded-t absolute"src="imgs/sg/sg3.png">
 					<div class="flex bg-black pin-b pin-l rounded-br-sm p-1 opacity-75 absolute"> 45:00</div>
 				</div>
